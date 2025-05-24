@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoo Keeper Helper</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    .animal {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border: 2px dashed #4CAF50;
+      border-radius: 15px;
+      display: inline-block;
+      width: 200px;
+    }
+    button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffcc70;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐾 Zoo Keeper Helper 🐾</h1>
+
+  <div class="animal" id="tiger">
+    <h2>🐯 Tiger</h2>
+    <button onclick="feedAnimal('tiger')">Feed</button>
+    <button onclick="cleanAnimal('tiger')">Clean</button>
+    <div class="message" id="tiger-msg"></div>
+  </div>
+
+  <div class="animal" id="unicorn">
+    <h2>🦄 Unicorn</h2>
+    <button onclick="feedAnimal('unicorn')">Feed</button>
+    <button onclick="cleanAnimal('unicorn')">Clean</button>
+    <div class="message" id="unicorn-msg"></div>
+  </div>
+
+  <div class="animal" id="fairy">
+    <h2>🧚🏽‍♀️ Fairy</h2>
+    <button onclick="feedAnimal('fairy')">Feed</button>
+    <button onclick="cleanAnimal('fairy')">Clean</button>
+    <div class="message" id="fairy-msg"></div>
+  </div>
+
+  <script>
+    function feedAnimal(animal) {
+      document.getElementById(animal + '-msg').innerText = `You fed the ${animal}! Yum yum!`;
+    }
+
+    function cleanAnimal(animal) {
+      document.getElementById(animal + '-msg').innerText = `You cleaned the ${animal}! So fresh and so clean!`;
+    }
+  </script>
+</body>
+</html>
